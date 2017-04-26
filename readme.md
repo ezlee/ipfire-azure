@@ -1,28 +1,28 @@
 IPFire on Azure
 ====
 
-IPFire is a nimble, Linux based firewall that is widely used by enthusiasts and organizations alike. IPFire doesn't style itself as an enterprise class solution, being primarily geared at SOHO and medium-sized organizations. It's compact size however makes it ideal for running edge protection on a cloud-based Virtual Data Center as well as a way to control access to resources in the VDC.
+IPFire is a nimble, Linux based firewall that is widely used by enthusiasts and organizations alike. IPFire doesn't style itself as an enterprise class solution, being primarily geared at SOHO and medium-sized organizations. It's compact size however makes it ideal for running edge protection as a virtual appliance on a cloud-based virtual data center as well as a way to control access to resources in the VDC.
 
 This little project started grew out of a desire to get IPFire on Azure after having successfully got Untangle (another excellent firewall distro) to run on Azure. IPFire on Azure enables networks to have more fine grained control over network policy than that which is offered with standard network components on Azure like NSG's. The typical network topology on Azure is to carve up a Virtual Network into subnets and use a firewall or sort to control access between the subnets. The configurration in this template is a fairly standard set up for networks of all types with a public subnet with an edge device that controls access to a private subnet. 
 
 ![IPFire on Azure](images/ipfire.png)
 
-Pound-for-pound offers a many of the same features commercial firewalls offer at no cost because everything in on IPFire is open source including Content filtering, Road-warrior VPN (OpenVPN or IPSec), Site-to-site VPN (OpenVPN or IPSec), Intrusion Detection, IP Blocking, DHCP Services, DNS Services, Integrated Dynamic DNS, Firewall, Geoblocking, Reverse Proxying (w/ HAProxy), Spam Filtering, Antivirus, File Services, QoS, NTP and Much, much more...
+Pound-for-pound, IPFire offers a many of the same features commercial firewalls offer at no cost because everything in on IPFire is open source including content filtering, road-warrior VPN (OpenVPN or IPSec), site-to-site VPN (OpenVPN or IPSec), intrusion detection, DHCP services, DNS services, integrated dynamic DNS, firewall, geoblocking, reverse proxying (w/ HAProxy), spam filtering, antivirus, file services, QoS, NTP and much more...
 
 
 ##Prerequisites
 
 To setup IPFire on Azure, you'll need:
 
-* A prepped VHD image. You can download one here. 
+* A prepped VHD image. You can download one here or [prepare it yourself](prep.md). 
 * PowerShell and the [Azure Powershell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-3.8.0) to be installed
-* An SSH client (Putty for Windows)
+* An SSH client ([Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) for Windows)
 * An internet browser
 * An Azure Subscription.
-* The Azure Resource Manger (ARM) Template and the Parameters file.
+* The [Azure Resource Manger (ARM) Template (ipfire.json)](https://raw.githubusercontent.com/theonemule/ipfire-azure/master/ipfire.json) and the [Pparameters file (ipfire.parameters.json)](https://raw.githubusercontent.com/theonemule/ipfire-azure/master/ipfire.parameters.json).
 
 
-## Setting up IPFire on Azure
+##Setting up IPFire on Azure
 
 
 1. Logon to Azure. This will launch a dialog to prompt for your Azure credentials
