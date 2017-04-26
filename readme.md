@@ -1,7 +1,7 @@
 IPFire on Azure
 ====
 
-IPFire is a nimble, Linux based firewall that is widely used by enthusiasts and organizations alike. IPFire doesn't style itself as an enterprise class solution, being primarily geared at SOHO and medium-sized organizations. It's compact size however makes it ideal for running edge protection as a virtual appliance on a cloud-based virtual data center as well as a way to control access to resources in the VDC.
+[IPFire](http://www.ipfire.org/) is a nimble, Linux based firewall that is widely used by enthusiasts and organizations alike. IPFire doesn't style itself as an enterprise class solution, being primarily geared at SOHO and medium-sized organizations. It's compact size however makes it ideal for running edge protection as a virtual appliance on a cloud-based virtual data center as well as a way to control access to resources in the VDC.
 
 This little project started grew out of a desire to get IPFire on Azure after having successfully got Untangle (another excellent firewall distro) to run on Azure. IPFire on Azure enables networks to have more fine grained control over network policy than that which is offered with standard network components on Azure like NSG's. The typical network topology on Azure is to carve up a Virtual Network into subnets and use a firewall or sort to control access between the subnets. The configurration in this template is a fairly standard set up for networks of all types with a public subnet with an edge device that controls access to a private subnet. 
 
@@ -14,7 +14,7 @@ Pound-for-pound, IPFire offers a many of the same features commercial firewalls 
 
 To setup IPFire on Azure, you'll need:
 
-* A prepped VHD image. You can download one here or [prepare it yourself](prep.md). 
+* A prepped VHD image. You can [download one here](https://drive.google.com/open?id=0B5eZBhk0U0KZakpkYWlWQm85Y28) or [prepare it yourself](prep.md). 
 * PowerShell and the [Azure Powershell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-3.8.0) to be installed
 * An SSH client ([Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) for Windows)
 * An internet browser
@@ -46,8 +46,7 @@ To setup IPFire on Azure, you'll need:
 1. Upload the VHD. Azure will create a hash of the the image then upload it. This may take some time depending on your connection speed and CPU speed of your local machine. Change the name of the after the https:// in **Destination** to match your storage account name. (i.e. https://youripfire.blob....) Make sure the **ResourceGroupName** matches the  name give to the resource group created in Step 2. The LocalFilePath is simply the path to the .vhd file for the IPFire image.
 
 	````
-	Add-AzureRmVhd -ResourceGroupName ipfire6 -Destination "https://ipfire.blob.core.windows.net
-/vhds/ipfire.vhd" -LocalFilePath "path\to\ipFire.vhd"
+	Add-AzureRmVhd -ResourceGroupName ipfire6 -Destination "https://ipfire.blob.core.windows.net/vhds/ipfire.vhd" -LocalFilePath "path\to\ipFire.vhd"
 	````
 
 	When the upload completes, note the **DestinationUri** for the VHD. This will be needed in the next step.
