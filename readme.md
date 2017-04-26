@@ -24,8 +24,7 @@ To setup IPFire on Azure, you'll need:
 
 ## Setting up IPFire on Azure
 
-
-1. Logon to Azure. This will launch a dialog to prompt for your Azure credentials
+1. In Powershell, login to Azure. This will launch a dialog to prompt for your Azure credentials
 
 	````
 	Login-AzureRmAccount
