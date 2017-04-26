@@ -6,7 +6,7 @@
       "value": "ipfire-vm8"
     },
     "osDiskVhdUri": {
-      "value": "https://ipfire8.blob.core.windows.net/vhds/ipfire.vhd"
+      "value": "https://ipfire.blob.core.windows.net/vhds/ipfire.vhd"
     },
     "vmSize": {
       "value": "Standard_A1"
