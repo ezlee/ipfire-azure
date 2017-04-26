@@ -1,7 +1,7 @@
 IPFire on Azure
 ====
 
-[IPFire](http://www.ipfire.org/) is a nimble, Linux based firewall that is widely used by enthusiasts and organizations alike. IPFire doesn't style itself as an enterprise class solution, being primarily geared at SOHO and medium-sized organizations. It's compact size however makes it ideal for running edge protection as a virtual appliance on a cloud-based virtual data center as well as a way to control access to resources in the VDC.
+[IPFire](http://www.ipfire.org/) is a nimble, Linux based firewall that is widely used by enthusiasts and organizations alike. IPFire doesn't style itself as an enterprise class solution, being primarily geared at SOHO and medium-sized organizations. Its compact size however makes it ideal for running edge protection as a virtual appliance on a cloud-based virtual data center as well as a way to control access to resources in the VDC.
 
 This little project started grew out of a desire to get IPFire on Azure after having successfully got Untangle (another excellent firewall distro) to run on Azure. IPFire on Azure enables networks to have more fine grained control over network policy than that which is offered with standard network components on Azure like NSG's. The typical network topology on Azure is to carve up a Virtual Network into subnets and use a firewall or sort to control access between the subnets. The configurration in this template is a fairly standard set up for networks of all types with a public subnet with an edge device that controls access to a private subnet. 
 
