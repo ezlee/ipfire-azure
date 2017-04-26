@@ -10,7 +10,7 @@ This little project started grew out of a desire to get IPFire on Azure after ha
 Pound-for-pound, IPFire offers a many of the same features commercial firewalls offer at no cost because everything in on IPFire is open source including content filtering, road-warrior VPN (OpenVPN or IPSec), site-to-site VPN (OpenVPN or IPSec), intrusion detection, DHCP services, DNS services, integrated dynamic DNS, firewall, geoblocking, reverse proxying (w/ HAProxy), spam filtering, antivirus, file services, QoS, NTP and much more...
 
 
-##Prerequisites
+## Prerequisites
 
 To setup IPFire on Azure, you'll need:
 
@@ -22,7 +22,7 @@ To setup IPFire on Azure, you'll need:
 * The [Azure Resource Manger (ARM) Template (ipfire.json)](https://raw.githubusercontent.com/theonemule/ipfire-azure/master/ipfire.json) and the [Pparameters file (ipfire.parameters.json)](https://raw.githubusercontent.com/theonemule/ipfire-azure/master/ipfire.parameters.json).
 
 
-##Setting up IPFire on Azure
+## Setting up IPFire on Azure
 
 
 1. Logon to Azure. This will launch a dialog to prompt for your Azure credentials
